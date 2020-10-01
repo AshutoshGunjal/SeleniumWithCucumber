@@ -1,19 +1,34 @@
 package com.api.cucumber.stepDefinition;
 
+import com.api.cucumber.BaseClass;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class PostFeatureStepDefinition {
+
+	// Dependency Injection steps
+	// 1. To create reference variable in the dependent class
+	// 2. To initialize reference variable via constructor
+
+	private BaseClass baseClass;
+
+	public PostFeatureStepDefinition(BaseClass baseClass) {
+		// initialize the local variable
+		this.baseClass = baseClass;
+	}
+
 	@Given("^User should be logged in $")
 	public void user_should_be_logged_in() throws Throwable {
-		System.out.println("Given User should be logged in");
+		System.out.println("Given User should be logged in == " + baseClass.getFeatureName());
+		System.out.println("Given User should be logged in == " + baseClass.getScenarioName());
 	}
 
 	@When("^I type the post as \"([^\"]*)\" in the text wall$")
-	    public void i_type_the_post_as_something_in_the_text_wall(String strArg1) throws Throwable {
-	        System.out.println("Value : " + strArg1 + 1/0);
+	public void i_type_the_post_as_something_in_the_text_wall(String strArg1) throws Throwable {
+		System.out.println("Value : " + strArg1 + 1 / 0);
 	}
 
 	@When("^User supply the YouTube link as \"([^\"]*)\" in the textbox$")
