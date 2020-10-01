@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features ={"src/test/java/com/api/cucumber/featureFile/PostFeature.feature"},
-		glue = {"com.api.cucumber.stepDefinition", "com.api.cucumber.hookss"}
+		glue = {"com.api.cucumber.stepDefinition", "com.api.cucumber.hooks"}
 		)
 public class PostFeatureRunner {
 	

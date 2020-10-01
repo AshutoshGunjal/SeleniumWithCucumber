@@ -13,7 +13,7 @@ public class PostFeatureStepDefinition {
 
 	@When("^I type the post as \"([^\"]*)\" in the text wall$")
 	    public void i_type_the_post_as_something_in_the_text_wall(String strArg1) throws Throwable {
-	        System.out.println("Value : " + strArg1);
+	        System.out.println("Value : " + strArg1 + 1/0);
 	}
 
 	@When("^User supply the YouTube link as \"([^\"]*)\" in the textbox$")
