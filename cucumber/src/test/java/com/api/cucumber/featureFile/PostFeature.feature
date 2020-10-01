@@ -11,7 +11,7 @@ Scenario: Post a text on user wall
 	Then The message should get posted
 	
 Scenario: Post a video on user wall 
-	When User supply the YouTube link as "http:google.com" in the textbox
+	When User supply the YouTube link as "http://www.google.com" in the textbox
 	And Click on post button
 	Then Video should posted on user wall
 	And Video should have proper Thumbnail
