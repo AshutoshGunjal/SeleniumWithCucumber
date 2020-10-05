@@ -1,7 +1,8 @@
 Feature: Post feature of facebook
 	This will test the post functionality of the user wall
 	
-Background: Given User should be logged in 
+Background: 
+	Given User should be logged in 
 	And should be present at its own wall 
 
 

@@ -16,5 +16,4 @@ public class BaseClass {
 		featureName = "BDD";
 		scenarioName = "Dependency Injection";
 	}
-	
 }
